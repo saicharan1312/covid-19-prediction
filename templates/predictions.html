@@ -1,0 +1,109 @@
+{% load static %}
+<html>
+<head>
+<style>
+form { 
+    border: 2px solid #f1f1f1; 
+  } 
+  
+  
+  input[type=text], 
+  input[type=password] { 
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+  } 
+  
+  button { 
+    background-color:orange; 
+    color:white;
+    margin: 1px 1px;
+    font-size:20px ;
+    font-family:calibri ;
+    height:50px;
+    border:none;
+    cursor: pointer; 
+    width: 100%; 
+    box-shadow: none;
+  } 
+ 
+  button:hover { 
+    opacity: 0.8; 
+  } 
+
+  
+  .container { 
+    padding: 30px; 
+  } 
+ 
+
+ 
+  @media screen and (max-width: 300px) { 
+    span.new { 
+      display: block; 
+      float: none; 
+    } 
+  } 
+  body{
+      background:url({% static 'images/covid.PNG' %});
+      
+       background-size:cover;
+     
+    }  
+x
+{
+  color : white;
+  font-size : 20px;
+  text-decoration : none;
+
+}
+.xx
+{
+  text-align : justify;
+font-size : 18px;
+line-height : 30px;
+text-indent : 0px;
+padding : 20px;
+
+opacity : 0.9;
+
+}
+.yy
+{
+  text-align : center;
+font-size : 18px;
+line-height : 10px;
+text-indent : 10px;
+padding : 0px;
+//opacity : 0.7;
+
+}
+
+
+</style>
+</head>
+<body>
+<x>Hello,{{ user.username }}<x>
+  <table width="100%">
+  <tr height="100px"></tr></table>
+<table width="100%">
+  <tr height="100px">
+    <td width="50%">
+
+      <form method="get" action="dataenter" style="font-size: 0px">
+    <button type="submit">Timeseries - Confirmed cases</button>
+
+    </td></tr>
+<tr height="100px">
+    <td with="50%"> 
+    
+      <form method="get" action="dataenter" style="font-size: 0px">
+    <button type="submit">Time series - Total Deaths </button>
+
+    </td> 
+  </tr></table>
+</body>
+</form>

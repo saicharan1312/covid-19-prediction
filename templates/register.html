@@ -1,0 +1,107 @@
+{% load static%}
+<!DOCTYPE html> 
+<html> 
+<style> 
+
+  form { 
+    border: 2px solid #f1f1f1; 
+  } 
+ 
+  input[type=text], 
+  input[type=number],
+  input[type=password] { 
+    width: 100%; 
+    padding: 10px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 0px solid #ccc; 
+    box-sizing: border-box; 
+  } 
+  
+  
+  button { font-size: 12px;
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 14px 20px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%; 
+  } 
+
+  button:hover { 
+    opacity: 0.8; 
+  } 
+  
+  .container { 
+    padding: 30px; 
+  } 
+  
+  span.new { 
+    float: right; 
+ 
+  } 
+  @media screen and (max-width: 300px) { 
+    span.new { 
+      display: block; 
+      float: none; 
+    } 
+  } 
+  body{
+      background:url({% static 'images/coronavirus.jpeg' %});  background-size:cover;
+      opacity=0.7;
+    }  
+</style> 
+
+<body> 
+<table border='0' width="100%">
+  <tr height="20px"><
+  <h1 style="color:white;"><center>Coronavirus Prediction</center>
+</tr></table>
+
+<table border='0' width=100%>
+  <tr height="250px">
+   <td width="39%"></td>
+
+<td width="25%">
+  <h2>Register now:</h2> 
+      <form action="predictions" method="POST">
+         {% csrf_token %}
+            <div class="imgcontainer">
+              <div class="container"> 
+                <label><b>Username</b></label> 
+                  <input type="text" placeholder="Enter Username" name="username" required> 
+
+                <label><b>Email</b></label> 
+                  <input type="text" placeholder="Enter Email address" name="email" required> 
+
+                <label><b>first name</b></label> 
+                  <input type="text" placeholder="Enter your first name" name="first_name" required>
+
+                 <label><b>Last name</b></label> 
+                  <input type="text" placeholder="Enter your lasst name" name="last_name" required>
+
+                <label><b>Password</b></label> 
+                  <input type="password" placeholder="Enter Password" name="password1" required> 
+
+                 <label><b>Confirm Password</b></label> 
+                   <input type="password" placeholder="Enter Password" name="password2" required>
+
+      <a class="btn" href="predictions"></a>
+      <button class="btn" type="submit">Register</button>
+      <input type="checkbox" checked="checked"> Remember me</input>
+    </div> 
+  </td>
+  <td width="40%"></td>
+
+</form>
+<div>
+  {% for message in messages %}
+  <h2>{{messages}}</h2>
+  {% endfor %}
+</div>
+{% block content %}  {% endblock %}
+</body> 
+
+</html> 
+

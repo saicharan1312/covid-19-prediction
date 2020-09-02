@@ -1,0 +1,67 @@
+{% load static%}
+<!DOCTYPE html> 
+<html> 
+<style> 
+
+  form { 
+    border: 2px solid #f1f1f1; 
+  } 
+ 
+  input[type=text], 
+  input[type=number],
+  input[type=password] { 
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+  } 
+  
+  
+  button { font-size: 12px;
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 14px 20px; 
+    margin: 8px 0; 
+    border: none; 
+    cursor: pointer; 
+    width: 100%; 
+  } 
+
+  button:hover { 
+    opacity: 0.8; 
+  } 
+  
+  .container { 
+    padding: 30px; 
+  } 
+  
+  span.new { 
+    float: right; 
+ 
+  } 
+  @media screen and (max-width: 300px) { 
+    span.new { 
+      display: block; 
+      float: none; 
+    } 
+  } 
+  body{
+      background:url({% static 'images/coronavirus.jpeg' %});  background-size:cover;
+      opacity=0.7;
+    }  
+</style> 
+
+<body> 
+<table border='0' width="100%">
+  <tr height="90px"><
+  <h1 style="color:white;"><center>Coronavirus Prediction</center></h1>
+  <td width="40%">
+  	
+</form>
+{% block content %}  {% endblock %}
+</body> 
+
+</html> 
+

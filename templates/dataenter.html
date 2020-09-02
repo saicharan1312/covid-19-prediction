@@ -1,0 +1,122 @@
+{% load static %}
+<html>
+<head>
+<style>
+form { 
+    border: 2px solid #f1f1f1; 
+  } 
+  
+  
+  input[type=text], 
+  input[type=password] { 
+    size: 20px;
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+  } 
+  
+  button { 
+    background-color:orange; 
+    color:white;
+    margin: 0px 0px;
+    font-size:20px ;
+    font-family:calibri ;
+    height:50px;
+    border:none;
+    cursor: pointer; 
+    width: 100%; 
+    box-shadow: none;
+  } 
+ 
+  button:hover { 
+    opacity: 1; 
+  } 
+
+  
+  .container { 
+    padding: 30px; 
+  } 
+ 
+
+ 
+  @media screen and (max-width: 300px) { 
+    span.new { 
+      display: block; 
+      float: none; 
+    } 
+  } 
+  body{
+      background:url({% static 'images/covid.PNG' %});
+      
+       background-size:cover;
+     
+    }  
+x
+{
+  color : white;
+  font-size : 20px;
+  text-decoration : none;
+}
+x:hover
+{
+  color : yellow;
+  font-size : 24px;
+}
+.xx
+{
+  text-align : justify;
+font-size : 18px;
+line-height : 30px;
+text-indent : 0px;
+padding : 20px;
+
+opacity : 0.9;
+
+}
+.yy
+{
+  text-align : center;
+font-size : 18px;
+line-height : 10px;
+text-indent : 10px;
+padding : 0px;
+//opacity : 0.7;
+
+}
+
+
+</style>
+</head>
+<body><table>
+  <tr height="10px"></tr></table>
+</tr></table>
+<x>Prediction Form:</x>
+<table>
+  <tr height="100px"></tr></table>
+
+<form action="confirmedcases" method="post">
+{% csrf_token %}
+<div class="p">
+
+  <div class="container">
+    <label><b>Date</b></label>
+    <input type="text" placeholder="Date" name="Date" required>
+    
+    <label for="psw"><b>Daily Deceased</b></label>
+    <input type="text" placeholder="Daily Deceased" name="Daily_Deceased" required>
+    
+    <label for="psw"><b>Daily Recovered</b></label>
+    <input type="text" placeholder="Daily Recovered" name="Daily_Recovered" required>
+    
+    <label for="psw"><b>Total Recovered</b></label>
+    <input type="text" placeholder="Total Recovered" name="Total_Recovered" required>
+        
+    <button type="submit">Predict</button>
+  </div>
+ </div>
+</form>
+</body>
+</html>
