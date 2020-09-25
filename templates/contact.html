@@ -1,9 +1,77 @@
-<h1>Contact us:</h1>
-<p>This is a template</p>
+{% load static %}
 <html>
-.x
+<head>
+<style>
+form { 
+    border: 2px solid #f1f1f1; 
+  } 
+  
+.a
 {
- text-align : justify;
+  color : white;
+  font-size : 15px;
+  text-decoration : none;
+}
+  input[type=text], 
+  input[type=password] { 
+    width: 100%; 
+    padding: 12px 20px; 
+    margin: 8px 0; 
+    display: inline-block; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+  } 
+  
+  button { 
+    background-color:orange; 
+    color:white;
+    margin: 0px 0px;
+    font-size:20px ;
+    font-family:calibri ;
+    height:50px;
+    border:none;
+    cursor: pointer; 
+    width: 100%; 
+    box-shadow: none;
+  } 
+ 
+  button:hover { 
+    opacity: 1; 
+  } 
+
+  
+  .container { 
+    padding: 30px; 
+  } 
+ 
+
+ 
+  @media screen and (max-width: 300px) { 
+    span.new { 
+      display: block; 
+      float: none; 
+    } 
+  } 
+  body{
+      background:url({% static 'images/covid.PNG' %});
+      
+       background-size:cover;
+     
+    }  
+x
+{
+  color : white;
+  font-size : 20px;
+  text-decoration : none;
+}
+x:hover
+{
+  color : yellow;
+  font-size : 24px;
+}
+.xx
+{
+  text-align : justify;
 font-size : 18px;
 line-height : 30px;
 text-indent : 0px;
@@ -12,19 +80,59 @@ padding : 20px;
 opacity : 0.9;
 
 }
-<head>
-	<title>Home Page</title>
+.yy
+{
+  text-align : center;
+font-size : 18px;
+line-height : 10px;
+text-indent : 10px;
+padding : 0px;
+//opacity : 0.7;
+
+}
+
+
+
+</style>
 </head>
-	<style>body{
-			background:url({% static 'images/corona.PNG' %});  background-size:50;;
-		}</style>
-<body bgcolor="gray">
-	<h1 style="color:white;"><center>Coronavirus Prediction</center>
-	</h1>
-<tr height="100px">
-<td><p class="x"><a href="register">Register</a></p>td>
-{% block content %}  {% endblock %}
+<body>
+<table><tr height="20px"></tr></table>
+<table border='0' width="100%" style="background-color:red;text-align:center;" cellspacing="0" cellpadding="0"  align="center">
+<tr height="10px">
+<td width="60%"><form method="get" action="cases/" style="font-size: 0px">
+    <button type="submit">COVID-19</button>
+</form></td>
+<td width="8%"><form method="get" action="login/" style="font-size: 0px">
+    <button type="submit">Login</button>
+</form></td>
+<td width="8%"><form method="get" action="register/" style="font-size: 0px" >
+    <button type="submit">Register</button>
+</form></td>
+<td width="10%"><form method="get" action="about/" style="font-size: 0px">
+    <button type="submit">About Us</button>
+</form></td>
+<td width="10%"><form method="get" action="Contact/" style="font-size: 0px">
+    <button type="submit">Contact Us</button>
+</form></td>
+</tr>
+</table>
+<table border='0' width="100%" cellspacing="0" cellpadding="0"  align="center" bgcolor="lightgray" >
+<tr height="300px">
+  <td width=3%></td>
+<td><p class="xx">Contact_me_at:
+	..........................................................................................Phonenumber:9100169675..........................................................................................
+	..........................................................linkedin-id::::https://www.linkedin.com/in/sai-charan-thummalapudi-8b2b82170/.....................................
+	.....................................................................................email-id:saicharan12nov@gmail.com......................................................................
 
-
+</p></td>
+<td width="20%"><img src="{% static 'images/me.PNG' %}" height="250px" width="100%"></td>
+<td width=3%></td>
+</table>
+<td><p class="a"> Copyright &copy designed by Sai Charan Thummalapudi</p></td>
+</tr>
+</table>
 </body>
+{% block content %}  {% endblock %}
 </html>
+
+
